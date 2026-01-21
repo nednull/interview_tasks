@@ -19,6 +19,10 @@ struct circle
 };
 
 
+// Parses input file and creates a collection of circle structs.
+// Parser expects the following format (per line): <x_coordinate> <y_coordinate> <radius>
+// 
+// Example: 1.0 2.0 3.0
 std::vector<circle> parse_input(std::string& filename)
 {
   std::vector<circle> circles = {};
@@ -55,6 +59,7 @@ bool has_collision(std::vector<circle>& circles)
 
 int main(int argc, char** argv)
 {
+  // The program requires one argument; the path of the input file.
   std::string filename(argv[1]);
   std::vector<circle> circles = {}; // TODO: parse input file
   
